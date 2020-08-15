@@ -6,11 +6,13 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 import java.awt.Color;
+import java.util.Random;
 
 public class RobotColorChooser {
 	public static void main(String[] args) {
  		
 		Robot r = new Robot();
+		Random random =new Random();
 		
 		r.setSpeed(100);
 		r.setPenWidth(10);
@@ -20,7 +22,9 @@ public class RobotColorChooser {
 		String strGreen = JOptionPane.showInputDialog("How much green?");
 		String strBlue = JOptionPane.showInputDialog("How much blue?");
 		
-		if (strRed != null & strGreen != null & strBlue != null) {
+		System.out.println(strRed);
+		
+		if (!strRed.equals("") && !strGreen.equals("") && !strBlue.equals("")) {
 			int red = Integer.parseInt(strRed);
 			int green = Integer.parseInt(strGreen);
 			int blue = Integer.parseInt(strBlue);
@@ -28,8 +32,10 @@ public class RobotColorChooser {
 		
 		}
 		else {
-			int red = rand.new random
-			r.setPenColor(color);
+			int red = random.nextInt(256);
+			int green = random.nextInt(256);
+			int blue = random.nextInt(256);
+			r.setPenColor(red,green,blue);
 		}
 		
 	
