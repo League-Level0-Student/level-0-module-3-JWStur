@@ -1,4 +1,4 @@
-
+  
 void setup() {
      ellipseMode(CENTER);
      size(500, 500);
@@ -7,7 +7,16 @@ void setup() {
 }
 
 void draw() {
-  
+  for (int i = 0; i <= 450; i+=15) {
+    if (i % 2 == 0){
+      fill(#FEFF24);
+    }
+    else {
+      fill(0,0,0);
+    }
+    ellipse(i,i,50,50);
+    drawBeeFace(450,450);
+  }
 // First run the program and you should see a flower.  
   
   

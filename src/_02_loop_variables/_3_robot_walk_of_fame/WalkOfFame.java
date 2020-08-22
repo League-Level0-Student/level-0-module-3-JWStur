@@ -9,15 +9,20 @@ public class WalkOfFame {
 		
 		
 		rob.setSpeed(100);
-		rob.moveTo(0, 100);
+		rob.moveTo(0, 250);
 		rob.setPenColor(0,0,0);
 		rob.penDown();
+		rob.miniaturize();
 		
-		for (int i = 1; i <= 10; i++) {
-			rob.move(30);
-			rob.turn(144);	
+		for (int j = 1; j <= 20; j++ ) {
+			for (int i = 1; i <= 10; i++) {
+				rob.move(30);
+				rob.turn(144);	
+			}
+			rob.penUp();
+			rob.moveTo(0+(50*j),250);
+			rob.penDown();
 		}
-		
 		
 		
 		
